@@ -115,11 +115,14 @@ export default function BuilderClient() {
         {/* على الشاشات الصغيرة نعرض الخصائص تحت المعاينة */}
         <div className="mt-4 md:hidden">
           <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-            <PropertiesPanel
-              section={selectedSection}
-              onChange={handleUpdateSection}
-              onDelete={handleDeleteSelected}
-            />
+{selectedSection && (
+  <PropertiesPanel
+      section={selectedSection}
+      onChange={handleUpdateSection}
+      onDelete={handleDeleteSelected}
+  />
+)}
+      
           </div>
         </div>
       </div>
